@@ -30,4 +30,11 @@ public class Pilha<T> {
         return elemento;
     }
 
+    public void showElementos() {
+        System.out.println("Elementos:");
+        for (T elemento : elementos) {
+            System.out.println(elemento);
+        }
+    }
+
 }
