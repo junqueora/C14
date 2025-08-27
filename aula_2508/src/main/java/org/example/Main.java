@@ -1,6 +1,6 @@
 package org.example;
 
-import pilha.Pilha;
+import classes.Pilha;
 
 public class Main {
     public static void main(String[] args) {

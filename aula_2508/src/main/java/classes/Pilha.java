@@ -1,4 +1,4 @@
-package pilha;
+package classes;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;
@@ -31,7 +31,7 @@ public class Pilha<T> {
     }
 
     public void showElementos() {
-        System.out.println("Elementos:");
+        System.out.println("Elementos da pilha:");
         for (T elemento : elementos) {
             System.out.println(elemento);
         }
