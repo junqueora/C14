@@ -27,6 +27,13 @@ public class Fila<T> {
         return elementos.removeFirst();
     }
 
+    public T getElemento(int index) throws NoSuchElementException {
+        if (filaVazia()) {
+            throw new NoSuchElementException();
+        }
+        return elementos.get(index);
+    }
+
     public void showElementos() {
         System.out.println("Elementos da fila:");
         for (T elemento : elementos) {

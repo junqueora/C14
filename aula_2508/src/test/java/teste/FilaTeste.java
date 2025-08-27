@@ -27,7 +27,8 @@ public class FilaTeste {
     public void testeEnfileirar(){
         Fila<Integer> filaInteiros = new Fila<>();
         filaInteiros.enfileirar(21);
-        assertEquals(1, filaInteiros.size());
+        filaInteiros.enfileirar(22);
+        assertEquals(22, filaInteiros.getElemento(1).intValue());
     }
 
     @Test
