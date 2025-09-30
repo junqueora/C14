@@ -64,16 +64,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: [tests, build]
     steps:
-      - name: Enviar notificação por e-mail
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.sendgrid.net
-          server_port: 587
-          username: apikey
-          password: ${{ secrets.SMTP_PASSWORD }}
-          from: ppaiva7@outlook.com
-          to: ${{ secrets.EMAIL_TO }}
-          subject: "Pipeline executado com sucesso"
-          body: |
-            O pipeline no repositório C14 foi executado com sucesso!
-          secure: true
+      - name: Criar script de notificação
+        run: |
+          echo '#!/bin/bash' > notify.sh
+          echo 'echo "Pipeline executado com sucesso!" | mail -s "Status do Pipeline" $EMAIL_TO' >> notify.sh
+          chmod +x notify.sh
+      - name: Instalar utilitário de e-mail
+        run: sudo apt-get update && sudo apt-get install -y mailutils
+
+      - name: Executar notificação
+        run: ./notify.sh
