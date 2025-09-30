@@ -7,7 +7,7 @@ import java.util.EmptyStackException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class PilhaTeste {
+public class PilhaTest {
 
     @Test
     public void testePilhaVazia(){
