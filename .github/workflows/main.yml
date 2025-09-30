@@ -69,7 +69,7 @@ jobs:
         with:
           server_address: smtp.sendgrid.net
           server_port: 587
-          username: ${{ secrets.SMTP_USER }}
+          username: apikey
           password: ${{ secrets.SMTP_PASSWORD }}
           from: ppaiva7@outlook.com
           to: ${{ secrets.EMAIL_TO }}
