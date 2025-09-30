@@ -67,11 +67,11 @@ jobs:
       - name: Enviar notificação por e-mail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 465
+          server_address: smtp.sendgrid.net
+          server_port: 587
           username: ${{ secrets.SMTP_USER }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          from: ${{ secrets.SMTP_USER }}
+          from: ppaiva7@outlook.com
           to: ${{ secrets.EMAIL_TO }}
           subject: "Pipeline executado com sucesso"
           body: |
