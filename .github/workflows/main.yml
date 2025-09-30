@@ -72,6 +72,7 @@ jobs:
           username: ${{ secrets.SMTP_USER }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "Pipeline executado com sucesso"
+          from: ${{ secrets.SMTP_USER }}
           to: ${{ secrets.EMAIL_TO }}
           body: |
             O pipeline no repositório C14 foi executado com sucesso!
