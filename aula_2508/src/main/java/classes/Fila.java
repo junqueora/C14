@@ -25,7 +25,7 @@ public class Fila<T> {
             throw new NoSuchElementException();
         }
         return elementos.removeFirst();
-    }
+    } //teste de gatilho
 
     public T getElemento(int index) throws NoSuchElementException {
         if (filaVazia()) {
